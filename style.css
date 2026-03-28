@@ -36,11 +36,11 @@
     backdrop-filter: blur(20px); */
 }
 
-/* Mobile Responsive */
+/* Mobile Responsive
 @media screen and (max-width: 480px) {
 
     .shadow-box {
         max-width: 100%;
         min-width: 280px !important;
     }
-}
+} */
