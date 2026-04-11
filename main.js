@@ -12,7 +12,7 @@ function updateClock() {
     let day = now.toLocaleDateString("en-US", { weekday: "long" });
     let year = now.getFullYear();
     let date = now.getDate();
-    let month = now.toLocaleDateString("en-Us", { month: "short"});
+    let month = now.toLocaleDateString("en-Us", { month: "short" });
 
     // Add leading zero
     if (hours < 10) hours = "0" + hours;
@@ -29,9 +29,30 @@ function updateClock() {
     document.getElementById("ampm").innerHTML = ampm;
     document.getElementById("date").innerHTML = date;
     document.getElementById("month").innerHTML = month;
+
+
+
+    // Theme Function 
+    const spiderBtn = document.getElementById("spider-Theme-tab");
+    const milesBtn = document.getElementById("Miles-Theme-tab");
+
+    const mainDiv = document.querySelector(".spider");
+
+    // RED THEME
+    spiderBtn.addEventListener("click", () => {
+        mainDiv.classList.remove("miles-morales");
+    });
+
+    // DARK THEME
+    milesBtn.addEventListener("click", () => {
+        mainDiv.classList.add("miles-morales");
+    });
 }
 
 setInterval(updateClock, 1000);
 
 
 updateClock();
+
+
+
